@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Data Management System</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <table id="leadDataTable" class="table">
+            <thead>
+                <tr>
+                    <th>Lead ID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Alternate Mobile</th>
+                    <th>Whatsapp</th>
+                    <th>Email</th>
+                    <th>Interested In</th>
+                    <th>Source</th>
+                    <th>Status</th>
+                    <th>Summary DOR</th>
+                    <th>Caller</th>
+                    <th>State</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#leadDataTable').DataTable({
+                "ajax": {
+                    "url": "admin.php", 
+                    "dataSrc": ""
+                },
+                "columns": [
+                    { "data": "Lead_ID" },
+                    { "data": "Name" },
+                    { "data": "Mobile" },
+                    { "data": "Alternate_Mobile" },
+                    { "data": "Whatsapp" },
+                    { "data": "Email" },
+                    { "data": "Interested_In" },
+                    { "data": "Source" },
+                    { "data": "Status" },
+                    { "data": "Summary_DOR" }, 
+                    { "data": "Caller" },
+                    { "data": "State" },
+                    { "data": "City" }
+                ]
+            });
+        });
+    </script>
+
+</body>
+
+</html>
